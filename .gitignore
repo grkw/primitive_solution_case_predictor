@@ -1,6 +1,10 @@
-/data
+data/
 
 .vscode/
+
+models/
+
+wandb/
 
 # Prerequisites
 *.d
