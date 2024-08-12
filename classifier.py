@@ -54,7 +54,7 @@ class CNNStateSelector(nn.Module):
         x = self.Softmax(x)
         return x
 
-# Input sequence may be so short that LSTM is not necessary
+# Could pass pi, vi, ai, pf, vf, af separately
 class LSTMStateSelector(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, output_size):
         super(LSTMStateSelector, self).__init__()

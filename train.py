@@ -13,7 +13,7 @@ from config import TrainConfig
 
 cfg = TrainConfig()
 
-train_dataset = CSVDataset(cfg.train_csv_file, cfg.csv_input_col, cfg.csv_label_col, cfg.num_examples_per_class)
+train_dataset = CSVDataset(cfg.train_csv_file, cfg.csv_input_col, cfg.csv_label_cols, -999)
 exit(0)
 train_dataloader = DataLoader(train_dataset, batch_size=cfg.batch_size, shuffle=True, num_workers=4)
 
