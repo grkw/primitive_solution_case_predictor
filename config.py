@@ -5,12 +5,12 @@ from typing import List
 class Config:
 
     # After trimming
-    csv_input_col: int = 18 # upper bound is exclusive
-    csv_label_cols: List[int] = field(default_factory=lambda: ['ruckig_solution_x','ruckig_solution_y','ruckig_solution_z'])
+    csv_input_col: int = 7 # upper bound is exclusive
+    csv_label_col: str = "ruckig_solution"
 
 @dataclass
 class TrainConfig(Config):
-    train_csv_file: List[str] = field(default_factory=lambda: ['data/training/train_10scale_6seed_5vmax_10amax.csv'])
+    train_csv_file: List[str] = field(default_factory=lambda: ['data/test_10scale_6seed_5vmax_5amax_15jmax.csv'])
     val_csv_file: List[str] = field(default_factory=lambda: ['data/val_data_8192paths_8wps_1scale_EXPplanner_2seed.csv'])
     
     num_examples_per_class: int = 100
